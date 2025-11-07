@@ -96,6 +96,58 @@ const newString = (str) => {
 // console.log(newString("this is new string"))
 // console.log(newString("th"))
 
+// Exercise 8:
+
+// Write a javascript program to extract the first half of a string of even length.
+
+const firstHalf = (str) => str.slice(0, str.length / 2);
+// console.log(firstHalf("Firoz"));
+// console.log(firstHalf("temple"));
+// console.log(firstHalf("Dinosaur"));
+
+
+// Exercise 9:
+// Write a javascript program to concatenate two strings except their first character.
+
+const concatenate = (str1, str2) => str1.slice(1, ) + str2.slice(1, );
+
+// console.log(concatenate("firoz", "akhter"));
+
+
+// Exercise 10:
+
+// Given two values, write a javascript program to find out which one is nearest to hundred
+
+
+const closeTo100 = (a, b) => Math.abs((100 - a)) < Math.abs((100 - b)) ?  a : b
+
+// console.log(closeTo100(90, 150));
+
+
+
+// Exercise 11:
+// Write a javascript program to check a given string
+// contains 2 to 4 occuraences of a sepcified character.
+
+
+const countChars = (str, char) => {
+    const count = str.split('').filter(ch => ch === char).length;
+
+    return count >= 2 && count <= 4;
+
+}
+
+// console.log(countChars("firozrrrr", 'o'));
+
+const isLeapYear = (year) => year % 4 === 0 && year % 100 != 0 || year % 400 === 0;
+
+console.log(isLeapYear(2014));
+console.log(isLeapYear(2015));
+console.log(isLeapYear(2016));
+console.log(isLeapYear(2017));
+console.log(isLeapYear(2018));
+console.log(isLeapYear(2019));
+
 
 
 
