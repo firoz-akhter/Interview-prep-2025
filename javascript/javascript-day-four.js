@@ -161,8 +161,15 @@ const products = [
   },
 ];
 
-const newProducts = products
-  .filter((ele) => ele.price > 50)
-  .sort((a, b) => a.price - b.price)
-  .map((ele) => ({ name: ele.name, price: ele.price }));
-console.log(newProducts);
+// const newProducts = products
+//   .filter((ele) => ele.price > 50)
+//   .sort((a, b) => a.price - b.price)
+//   .map((ele) => ({ name: ele.name, price: ele.price }));
+// console.log(newProducts);
+
+// const totalPrice = products.reduce(
+//   (acc, currValue) => (acc += currValue.price),
+//   0
+// );
+
+// console.log(totalPrice);
