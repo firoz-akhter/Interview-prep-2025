@@ -1,8 +1,6 @@
-"use strict";
 // let a:string = "hello";
 // let nambo:number = 342;
 // let check:boolean;
-Object.defineProperty(exports, "__esModule", { value: true });
 // let surname:string | number ;
 // surname= 234
 // const myFunc= (n:number, m:number):number => {
@@ -99,14 +97,37 @@ Object.defineProperty(exports, "__esModule", { value: true });
 class Player {
     height;
     weight;
-    constructor(height, weight) {
+    power;
+    id;
+    constructor(height, weight, power) {
         this.height = height;
         this.weight = weight;
+        this.power = power;
+        this.id = String(Math.random() * 100);
     }
-    myHeight = () => {
+    // getHeight = () => this.height;
+    get getMyHeight() {
         return this.height;
-    };
+    }
+    set changeHeight(height) {
+        this.height = height;
+    }
 }
-const abhi = new Player(100, 200);
-console.log(abhi.myHeight());
+const abhi = new Player(23, 89, 20);
+console.log(abhi.getMyHeight);
+abhi.changeHeight = 38;
+console.log(abhi.getMyHeight);
+export {};
+// console.log(abhi.weight)
+// class Player2 extends Player {
+//     special:boolean;
+//     constructor(height:number, weight:number, power:number, special:boolean) {
+//         super(height, weight, power)
+//         this.special = special;
+//     }
+//     getMyPower = () => this.power;
+// }
+// const abhi = new Player2(100, 150, 23, true);
+// console.log("weight", abhi.weight);
+// console.log("power", abhi.getMyPower() );
 //# sourceMappingURL=index.js.map

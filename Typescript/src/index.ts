@@ -152,20 +152,46 @@
 // syntax is same as interface
 
 class Player {
-    private height;
-    weight;
-    constructor(height:number, weight:number) {
-        this.height = height;
-        this.weight= weight;
+    public readonly id:string;
+    constructor(
+        private height:number,
+        public weight:number, 
+        protected power: number
+    ) {
+        this.id = String(Math.random()*100)
+    } 
+
+    // getHeight = () => this.height;
+
+    get getMyHeight():number {
+        return this.height;
     }
 
-    myHeight = () => {
-        return this.height;
+    set changeHeight(height:number) {
+        this.height = height;
     }
 }
 
-const abhi = new Player(100, 200);
+const abhi = new Player(23, 89, 20);
+console.log(abhi.getMyHeight)
+abhi.changeHeight = 38
+console.log(abhi.getMyHeight)
 
-console.log(abhi.myHeight());
+// console.log(abhi.weight)
+
+// class Player2 extends Player {
+//     special:boolean;
+//     constructor(height:number, weight:number, power:number, special:boolean) {
+//         super(height, weight, power)
+//         this.special = special;
+//     }
+
+//     getMyPower = () => this.power;
+// }
+
+
+// const abhi = new Player2(100, 150, 23, true);
+// console.log("weight", abhi.weight);
+// console.log("power", abhi.getMyPower() );
 
 
