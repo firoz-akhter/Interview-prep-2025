@@ -236,6 +236,56 @@
 // }
 
 
+// Generics
+
+// type Person = {
+//     name: string,
+//     age: number,
+// }
+
+// const myFunc = <T>(n:T):T => {
+//     return n;
+// }
+
+
+// const person1: Person = {
+//     name: "abhi",
+//     age: 25,
+// }
+
+// const ans = myFunc<Person>(person1);
+
+
+// type Person = {
+//     name: string,
+//     age: number,
+// }
+
+// const person1:Person = {
+//     name: "John",
+//     age: 98,
+// }
+
+// type Person2 = {
+//     name: string,
+//     age: number,
+//     email: string,
+// }
+
+// const person2:Person2 = {
+//     name: "Doe",
+//     age: 98,
+//     email: "firoz@gmail.com",
+// }
+
+
+
+// const func = <T, U extends T>(n:T, o:U):{n:T, o:U} => {
+//     return {n, o};
+// }
+
+// const ans = func<Person, Person2>(person1, person2)
+
 
 
 
