@@ -1,6 +1,7 @@
 // let a:string = "hello";
 // let nambo:number = 342;
 // let check:boolean;
+export {};
 // let surname:string | number ;
 // surname= 234
 // const myFunc= (n:number, m:number):number => {
@@ -94,30 +95,27 @@
 // const mode:themeMode = "dark"
 // classes in typescript
 // syntax is same as interface
-class Player {
-    height;
-    weight;
-    power;
-    id;
-    constructor(height, weight, power) {
-        this.height = height;
-        this.weight = weight;
-        this.power = power;
-        this.id = String(Math.random() * 100);
-    }
-    // getHeight = () => this.height;
-    get getMyHeight() {
-        return this.height;
-    }
-    set changeHeight(height) {
-        this.height = height;
-    }
-}
-const abhi = new Player(23, 89, 20);
-console.log(abhi.getMyHeight);
-abhi.changeHeight = 38;
-console.log(abhi.getMyHeight);
-export {};
+// class Player {
+//     public readonly id:string;
+//     constructor(
+//         private height:number,
+//         public weight:number, 
+//         protected power: number
+//     ) {
+//         this.id = String(Math.random()*100)
+//     } 
+//     // getHeight = () => this.height;
+//     get getMyHeight():number {
+//         return this.height;
+//     }
+//     set changeHeight(height:number) {
+//         this.height = height;
+//     }
+// }
+// const abhi = new Player(23, 89, 20);
+// console.log(abhi.getMyHeight)
+// abhi.changeHeight = 38
+// console.log(abhi.getMyHeight)
 // console.log(abhi.weight)
 // class Player2 extends Player {
 //     special:boolean;
@@ -130,4 +128,32 @@ export {};
 // const abhi = new Player2(100, 150, 23, true);
 // console.log("weight", abhi.weight);
 // console.log("power", abhi.getMyPower() );
+// class ka bhi type pehle se bana ke rakh skte hai
+// interface ProductType {
+//     name:string,
+//     price:number,
+//     stock:number,
+//     getId:() => string,
+//     offer?: boolean,
+// }
+// class Product implements ProductType {
+//     private readonly id = String(Math.random()*1000)
+//     constructor(
+//         public name: string,
+//         public price:number,
+//         public stock:number
+//     ) {}
+//     getId = () => this.id;
+// }
+// const product1 = new Product("Mac mini", 2000, 20);
+// const btn = document.getElementById("btn") as HTMLButtonElement;
+// const img = document.getElementById("myimg") as HTMLImageElement;
+// const form = document.getElementById("myform") as 
+// HTMLFormElement;
+// const myinput = document.querySelector("form > input") as
+// HTMLInputElement;
+// form.onsubmit = (e:SubmitEvent) => {
+//     e.preventDefault()
+//     console.log(myinput.value);
+// }
 //# sourceMappingURL=index.js.map
