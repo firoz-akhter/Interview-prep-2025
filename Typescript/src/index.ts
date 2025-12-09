@@ -144,3 +144,28 @@
 
 
 // const mode:themeMode = "dark"
+
+
+// classes in typescript
+
+
+// syntax is same as interface
+
+class Player {
+    private height;
+    weight;
+    constructor(height:number, weight:number) {
+        this.height = height;
+        this.weight= weight;
+    }
+
+    myHeight = () => {
+        return this.height;
+    }
+}
+
+const abhi = new Player(100, 200);
+
+console.log(abhi.myHeight());
+
+
