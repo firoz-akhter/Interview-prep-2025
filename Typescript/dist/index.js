@@ -94,4 +94,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // }
 // type themeMode = "light" | "dark";
 // const mode:themeMode = "dark"
+// classes in typescript
+// syntax is same as interface
+class Player {
+    height;
+    weight;
+    constructor(height, weight) {
+        this.height = height;
+        this.weight = weight;
+    }
+    myHeight = () => {
+        return this.height;
+    };
+}
+const abhi = new Player(100, 200);
+console.log(abhi.myHeight());
 //# sourceMappingURL=index.js.map
